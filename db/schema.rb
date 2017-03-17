@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317232732) do
+ActiveRecord::Schema.define(version: 20170317233354) do
+
+  create_table "links", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "description"
+    t.text     "url"
+    t.integer  "category"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
